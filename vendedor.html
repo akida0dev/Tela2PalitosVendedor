@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da Loja - TechShop Brasil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="vendedor.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="top-nav">
+                <button class="back-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="header-title">Painel da Loja</div>
+                <div class="premium-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>Plano 3 • Premium</span>
+                </div>
+            </div>
+            <div class="profile-summary">
+                <div class="avatar-box"><i class="fas fa-store"></i></div>
+                <div class="store-info">
+                    <h1>TechShop Brasil</h1>
+                    <div class="store-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>4.8 (342 avaliações)</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Planos -->
+        <section class="plans-section">
+            <label class="section-label">Selecionar Plano</label>
+            <div class="plans-grid">
+                <div class="plan-item" onclick="selectPlan(this)">
+                    <i class="fas fa-shield"></i>
+                    <p class="p-name">Básico</p>
+                    <p class="p-sub">Plano 1</p>
+                </div>
+                <div class="plan-item" onclick="selectPlan(this)">
+                    <i class="fas fa-bolt"></i>
+                    <p class="p-name">Pro</p>
+                    <p class="p-sub">Plano 2</p>
+                </div>
+                <div class="plan-item active" onclick="selectPlan(this)">
+                    <i class="fas fa-crown"></i>
+                    <p class="p-name">Premium</p>
+                    <p class="p-sub">Plano 3</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumo Financeiro -->
+        <section class="financial-summary">
+            <h2 class="summary-title">Resumo Financeiro</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-value">R$ 45.230</div>
+                    <div class="stat-label">Receita total</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="stat-value">342</div>
+                    <div class="stat-label">Pedidos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-value">R$ 132</div>
+                    <div class="stat-label">Ticket médio</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon pink">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="stat-value">3,2%</div>
+                    <div class="stat-label">Conversão</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gráfico de Receita -->
+        <section class="chart-section">
+            <div class="chart-header">
+                <h2 class="chart-title">Receita mensal</h2>
+                <span class="chart-year">2024</span>
+            </div>
+            <div class="chart-container">
+                <div class="chart-scale">
+                    <span>3000</span>
+                    <span>2000</span>
+                    <span>1000</span>
+                    <span>0</span>
+                </div>
+                <div class="chart-bars">
+                    <div class="bar-wrapper">
+                        <div class="bar-fill" data-height="45%"></div>
+                        <span class="bar-label">Jan</span>
+                    </div>
+                    <div class="bar-wrapper">
+                        <div class="bar-fill" data-height="65%"></div>
+                        <span class="bar-label">Fev</span>
+                    </div>
+                    <div class="bar-wrapper">
+                        <div class="bar-fill" data-height="55%"></div>
+                        <span class="bar-label">Mar</span>
+                    </div>
+                    <div class="bar-wrapper">
+                        <div class="bar-fill" data-height="85%"></div>
+                        <span class="bar-label">Abr</span>
+                    </div>
+                    <div class="bar-wrapper">
+                        <div class="bar-fill" data-height="100%"></div>
+                        <span class="bar-label">Mai</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produtos Cadastrados -->
+        <section class="products-section">
+            <div class="products-header">
+                <h2 class="products-title">Produtos cadastrados</h2>
+                <button class="btn-new"><i class="fas fa-plus"></i> Novo</button>
+            </div>
+
+            <div class="product-list">
+                <!-- Produto 1 -->
+                <div class="product-card">
+                    <div class="product-main-info">
+                        <div class="product-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="product-details">
+                            <p class="p-name">iPhone 15 Pro 128GB</p>
+                            <div class="p-price-row">
+                                <span class="p-price">R$ 5.999,00</span>
+                                <span class="p-stock">· 12 em estoque</span>
+                            </div>
+                            <p class="p-sales">48 vendas</p>
+                        </div>
+                    </div>
+                    <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="product-card">
+                    <div class="product-main-info">
+                        <div class="product-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="product-details">
+                            <p class="p-name">Samsung Galaxy S24</p>
+                            <div class="p-price-row">
+                                <span class="p-price">R$ 3.799,00</span>
+                                <span class="p-stock">· 8 em estoque</span>
+                            </div>
+                            <p class="p-sales">31 vendas</p>
+                        </div>
+                    </div>
+                    <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="product-card">
+                    <div class="product-main-info">
+                        <div class="product-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="product-details">
+                            <p class="p-name">MacBook Air M2</p>
+                            <div class="p-price-row">
+                                <span class="p-price">R$ 8.999,00</span>
+                                <span class="p-stock">· 5 em estoque</span>
+                            </div>
+                            <p class="p-sales">19 vendas</p>
+                        </div>
+                    </div>
+                    <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="product-card">
+                    <div class="product-main-info">
+                        <div class="product-image">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="product-details">
+                            <p class="p-name">AirPods Pro 2ª geração</p>
+                            <div class="p-price-row">
+                                <span class="p-price">R$ 1.599,00</span>
+                                <span class="p-stock">· 23 em estoque</span>
+                            </div>
+                            <p class="p-sales">67 vendas</p>
+                        </div>
+                    </div>
+                    <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item"><i class="fas fa-home"></i>Home</a>
+            <a href="#" class="nav-item"><i class="fas fa-search"></i>Buscar</a>
+            <a href="#" class="nav-item active"><i class="fas fa-store"></i>Loja</a>
+            <a href="#" class="nav-item"><i class="fas fa-user"></i>Perfil</a>
+        </nav>
+    </div>
+
+    <script>
+        // Animação do gráfico ao carregar a página
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.bar-fill').forEach(bar => {
+                    bar.style.height = bar.getAttribute('data-height');
+                });
+            }, 300);
+        });
+
+        // Função para selecionar plano
+        function selectPlan(element) {
+            document.querySelectorAll('.plan-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        // Interatividade dos botões
+        document.querySelectorAll('.btn-edit').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Editar produto');
+            });
+        });
+
+        document.querySelector('.btn-new').addEventListener('click', function() {
+            alert('Adicionar novo produto');
+        });
+
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.nav-item').forEach(nav => {
+                    nav.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelector('.back-btn').addEventListener('click', function() {
+            alert('Voltar para a página anterior');
+        });
+    </script>
+</body>
+</html>
